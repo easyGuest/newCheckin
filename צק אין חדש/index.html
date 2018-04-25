@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up Form Validation</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+
+<div class="wrapper">
+<nav>Check-in </nav>
+  <h2 id="account">Create your Account</h2>
+  <p id="required"><span class="ast"> *</span> Required information</p>
+
+
+
+ <form name="signup" action="https://httpbin.org/post" method="post" onsubmit='return formValidation()' onreset="resetHandler();">
+<div class="info">
+
+    <h3>Basic Information</h3>
+ <label for="email">Order number<span class="ast"> *</span></label>
+<input type="text" name="order" id="email" autofocus required/><span class="bar"></span><br>
+    
+    <label for="email">Email <span class="ast"> *</span></label>
+    <input type="email" name="email" id="email" autofocus required/><span class="bar"></span><br>
+
+    <!-- 1st Password -->
+    <label for="password">Password <span class="ast"> *</span></label>
+    <input type="password" name="password" id="password" required/><span class="bar"></span><br>
+    <div class="errors" id="password_error"></div>
+    <!-- 2nd Password -->
+    <label for="passcon">Required Password <span class="ast"> *</span></label>
+    <input type="password" name="passcon" id="passcon" required/><span class="bar"></span><br>
+    <div class="errors" id="passcon_error"></div>
+    <!-- First Name -->
+    <label for="first">First Name<span class="ast"> *</span></label>
+    <input type="text" name="first" id="first" required/><span class="bar"></span><br>
+    <div class="errors" id="first_error"></div>
+    <!-- Last Name -->
+    <label for="last">Last Name<span class="ast"> *</span></label>
+    <input type="text" name="last" id="last" required/><span class="bar"></span><br>
+    <div class="errors" id="last_error"></div>
+    <!-- Phone -->
+    <label for="phone">Phone Number<span class="ast"> *</span></label>
+    <input type="tel" name="phone" id="phone" placeholder="999-999-9999" required/><span class="bar"></span><br>
+    <div class="errors" id="phone_error"></div>
+    <!-- Address -->
+    <label for="address">Full address<span class="ast"> *</span></label>
+    <input type="text" name="address" id="address" required/><span class="bar"></span><br>
+
+
+
+  </div>
+  <div class="education">
+
+    <h3>Deposit</h3>
+    <!-- School -->
+          <label for="education">Card type<span class="ast"> *</span></label>
+    <select name="education" id="education" required ><span class="bar"></span>
+      <option value="" >-select-</option>
+      <option value="visa">Visa</option>
+      <option value="master card">Master card</option>
+      <option value="american express">American express</option>
+      <option value="diners">Diners</option>
+    </select><br>
+    <label for="school">Card holder name<span class="ast"> *</span></label>
+    <input type="text" name="school" id="school" required/><span class="bar"></span><br>
+    <div class="errors" id="school_error"></div>
+    <!-- Program -->
+    <label for="program">Card number<span class="ast"> *</span></label>
+    <input type="text" name="program" id="program" maxlength="16" placeholder="1234-5678-4321-8765" required/><span class="bar"></span><br>
+    <div class="errors" id="program_error"></div>
+
+    <div class="errors" id="education_error"></div>
+
+    <label for="graddate">Expire date<span class="ast">*</span></label>
+    <input type="text" name="graddate" placeholder="MM"id="graddate" required style="width:10%;" maxlength="2"/>/<input type="text" name="graddate" id="graddate" placeholder="YY" required style="width:10%;"  maxlength="2"/><br>
+
+    <div class="errors" id="graddate_error"></div>
+<label for="program">CVV<span class="ast">*</span></label>
+    <input type="text" name="program" id="program" maxlength="3" required style="width:10%;"/>
+
+  </div>
+
+  <div class="attachments">
+    <h3>Attachments</h3>
+    <label for="file">Passport</label>
+    <input id="file" type="file" style="border:none;"/>
+    <label for="file">Visa entrance</label>
+    <input id="file" type="file" style="border:none;"/>
+    <div class="buttons">
+        
+        
+  <input type="reset" value="Reset"/>
+  <input type="submit"  value="Apply"/>
+  </div>
+  </div>
+
+
+
+
+  </form>
+</div>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
